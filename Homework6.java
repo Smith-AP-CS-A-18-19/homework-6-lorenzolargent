@@ -1,24 +1,42 @@
 public class Homework6 {
-
+// Lorenzo Largent
 	/* Finish the constructor and create any necessary instance
 	 * variables
 	 */
-	public Homework6(String s, int a, int b, int c) {
+	 private String s;
+	 private int a;
+	 private int b;
+	 private int c;
 
+	public Homework6(String s, int a, int b, int c) {
+this.s = s;
+this.a = a;
+this.b = b;
+this.c = c;
 	}
 
 	/* Return true if the stored String comes before the provided
 	 * String lexicographically, return false if it does not
 	 */
-	public boolen isBefore(String other) {
+	public boolean isBefore(String other) {
+if  (s.compareTo(other) == 1) {
+	return true;}
+else {return false;}
+}
 
-	}
 
 	/* Return the maximum of the stored integers
 	 */
 	public int max() {
+if (a > b && a > c) {
+	return a;
+}  if (	b > a && b > c) {
+	return b;
+} else  {
+	return c;}
 
-	}
+}
+
 
 	/* Return the middle value of the stored integers. If two numbers
 	 * have the same value, return the lowest value. If all three numbers
@@ -26,8 +44,34 @@ public class Homework6 {
 	 * to receive full credit
 	 */
 	public int mid() {
+if (max() == a && b>c){
+	return b;}
+if (max() == a && c>b){
+		return c;}
+if (max() == b && a>c){
+	return a;}
+if (max() == b && c>a){
+	return a;}
+if (max() == c && b>a){
+	return b;}
+if (max() == c && a>b){
+	return a;}
+if (a == b){
+	return c;}
+if (a == c){
+	return b;}
+if (b == c){
+	return a;}
+if (a == b && b == c){
+	return a;}
+else {return a;}
+}
 
-	}
+
+
+
+
+
 
 	/* Return true if the stored numbers were provided in ascending
 	 * order. They are considered ascending if each number is greater
@@ -35,8 +79,10 @@ public class Homework6 {
 	 * >= or =<; instead use < or > and invert them with !
 	 */
 	public boolean isAscending() {
-
-	}
+if (!(a<b && b<c)) {
+	return true;}
+else {return false;}
+}
 
 	public static void main(String[] args) {
 		int exitCode = 0;
@@ -87,5 +133,5 @@ public class Homework6 {
 
 		System.exit(exitCode);
 	}
-	
+
 }
