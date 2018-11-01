@@ -19,6 +19,10 @@ this.c = c;
 	 * String lexicographically, return false if it does not
 	 */
 	public boolean isBefore(String other) {
+		/* compareTo will return a negative
+		 * number if the first string comes
+		 * before
+		 */
 if  (s.compareTo(other) == 1) {
 	return true;}
 else {return false;}
